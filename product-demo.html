@@ -1,0 +1,165 @@
+<html>
+<head>
+	<title>Product Demo</title>
+    <script language="JavaScript">
+        function check(form)
+        {
+            if(form.desc.value=="")
+            {
+                alert("Please enter a brief description about your product");
+                return(false);
+            }
+            if(form.price.selectedIndex==0)
+            {
+                alert("Please select an appropriate price range for your product");
+                return(false);
+            }
+            if(form.city.selectedIndex==0)
+            {
+                alert("Please select a city");
+                return(false);
+            }
+
+            return(true);
+        }
+    </script>
+</head>
+<style>
+	body{
+		background-image: url("images-used/productDemoBG.png");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+	#intro{
+
+        width: 40%;
+        border: 2px solid black;
+        padding: 25px;
+        margin: auto;
+        color: black;
+        text-align: center;
+        background: yellow;
+        border-radius: 25px;
+    }
+
+    #form{
+    	width: 60%;
+        border: 2px solid black;
+        padding: 25px;
+        margin: auto;
+        color: black;
+        text-align: center;
+        background: #f2f2f2;
+        border-radius: 25px;
+
+    }
+	
+	h1{
+		margin:auto;
+		color:green;
+	}
+	h4{
+		color:red;
+	}
+	select{
+    	width: 200px;
+    	padding: 5px 10px;
+        margin: 10px;
+        display: inline-block;
+        border: 5px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type=submit] {
+    	width: 150px;
+        background-color: green;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    input[type=submit]:hover {
+        background-color: #49a045;
+    }
+    #textarea{
+        width: 350px;
+        padding: 5px 10px;
+        margin: 10px;
+        display: inline-block;
+        border: 5px solid #ccc;
+        border-radius: 5px
+    }
+     @media screen and (orientation: portrait) and (max-width: 620px){
+       body{
+        background-image: url(images-used/productDemoBG.png);
+        }
+        #intro{
+        width: 90%;
+        margin:auto;
+        }
+        #form{
+            width: 90%;
+            margin:auto;
+        }
+        #textarea{
+            width:80%;
+        }
+       input[type=submit]{
+        width:50%;
+        margin:auto;
+        }
+        input[type=text] {
+        width: 90%;
+        }  
+        input[type=password] {
+        width: 90%;
+        }
+        input[type=date] {
+        width:90%;
+        }
+        input[type=email]
+        {
+            width:90%;
+        }
+        select{
+            width:90%;
+        }
+        iframe
+        {
+            width:80%;
+        }
+    }
+</style>
+<body>
+	<div id="intro">
+	<h1><i>Product Demo</i></h1>
+	<p>A "product demo" generally involves a demonstration of core features and capabilities of your product. It is a presentation of the value of your product or service to a current or prospective customer. The primary goal of product demonstration is to get the customer like the product and make the purchase faster.The demos may be of upcoming products, recently launched products or even existing products.</p>
+	<h4>How to make a product demo</h4>
+	<iframe width="300" height="200" src="https://www.youtube.com/embed/_Mm_q0X-R1c"></iframe>
+    </div>
+    <div id="form">
+    	<form id="productDemoForm" method="get" onsubmit="return(check(this))" action="javascript:alert('submitted')">
+    	<h4>In order to sell your product on our site you need to provide following details</h4>
+    	<textarea id="desc" name="desc" rows="6" cols="50" placeholder="Give a brief description of your product" ></textarea><br>
+    	<label>   Price </label>
+    	<select name="price" id="price">
+			<option value="--Select price range--" >--Select price range--</option>
+    		<option value="R1" >Rs 1- Rs 99</option>
+    		<option value="R2" >Rs 100-Rs 999</option>
+    		<option value="R3" >Rs 1000-Rs 9999</option>
+    		<option value="R4" >Rs 10000-Rs 99999</option>
+    		<option value="R5" >Greater than Rs 100000</option>
+  	    </select>
+    	<label>   City </label>
+        <select name="city" id="city">
+        	<option value="">--Select a city--</option>
+            <option value="bangalore">Bangalore</option>
+            <option value="hyderabad">Hyderabad</option>
+            <option value="chennai">Chennai</option>
+        </select><br>
+        <input type="submit" value="Submit"><br>
+        </form>
+    </div>
+</body>
+</html>

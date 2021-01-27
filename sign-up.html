@@ -1,0 +1,148 @@
+<html>
+<head>
+	<title>Sign Up</title>
+	<style>
+	body{
+		background-image: url("images-used/signUpBackground.png");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+	#outerBox{
+
+        width: 550px;
+        border: 2px solid black;
+        padding: 25px;
+        margin: auto;
+        color: black;
+        text-align: left;
+        background: white;
+        border-radius: 25px;
+    }
+    input[type=password] {
+        width: 200px;
+        padding: 5px 10px;
+        margin: 10px;
+        display: inline-block;
+        border: 5px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type=text] {
+        width: 200px;
+        padding: 5px 10px;
+        margin: 10px;
+        display: inline-block;
+        border: 5px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type=email] {
+        width: 350px;
+        padding: 5px 10px;
+        margin: 10px;
+        display: inline-block;
+        border: 5px solid #ccc;
+        border-radius: 5px;
+    }
+    label{
+    	color:red;
+    	margin:10px;
+    }
+    select{
+    	width: 200px;
+    	padding: 5px 10px;
+        margin: 10px;
+        display: inline-block;
+        border: 5px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type=submit] {
+    	width: 150px;
+        background-color: green;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    input[type=submit]:hover {
+        background-color: #49a045;
+    }
+    textarea{
+    	width: 350px;
+        padding: 5px 10px;
+        margin: 10px;
+        display: inline-block;
+        border: 5px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type=date] {
+    	height: 25px; 
+    	width: 200px;
+    	padding: 5px 10px;
+        margin: 10px;
+        display: inline-block;
+        border: 5px solid #ccc;
+        border-radius: 5px;
+    }
+    @media screen and (orientation: portrait) and (max-width: 620px){
+       body{
+        background-image: url(images-used/productDemoBG.png);
+        }
+        #outerBox{
+        width: 90%;
+        margin:auto;
+        }
+       input[type=submit]{
+        width:50%;
+        margin:auto;
+        }
+        input[type=text] {
+        width: 90%;
+        }  
+        input[type=password] {
+        width: 90%;
+        }
+        input[type=date] {
+        width:90%;
+        }
+        input[type=email]
+        {
+            width:90%;
+        }
+        select{
+            width:90%;
+        }
+    }
+	
+</style>
+</head>
+
+
+<body>
+	<div id="outerBox">
+		<h2>Join for Free!</h2>
+		Already have an account? Click here to <a href=login.html>Sign In</a><br>
+		<label for="full-name">Name </label>
+		<input type="text" id="first-name" placeholder="First Name"> <input type="text" id="last-name" placeholder="Last Name"><br>
+		<label>Gender</label> 
+		<input type="radio" id="male" name="gender" value="male">Male
+        <input type="radio" id="female" name="gender" value="female">Female
+        <input type="radio" id="other" name="gender" value="other">Other<br>
+        <label>   City </label>
+        <select name="city" id="city">
+        	<option value="">--Select a city--</option>
+            <option value="bangalore">Bangalore</option>
+            <option value="hyderabad">Hyderabad</option>
+            <option value="chennai">Chennai</option>
+        </select><br>
+		<label for="username">Username </label>
+		<input type="text" id="username" placeholder="Enter your username here"><br>
+	    <label for="password">Password </label>
+		<input type="password" id="password" placeholder="Enter atleast 5 characters"> <input type="password" id="confirm-password" placeholder="confirm password"><br>
+		<label for="email">Email </label>
+		<input type="email" id="username" placeholder="name@email.com"><br>
+		<label>Date of Birth</label><input type="date" id="Date"><br><br>
+		<input type="submit" value="Sign Up"><br>
+	</div>
+</body>
+</html>
