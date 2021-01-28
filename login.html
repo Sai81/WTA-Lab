@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="login.css">
+	<script language="JavaScript">
+		<!--
+        function check(form)
+        {
+        	if(form.username.value=="")
+        	{
+        		alert("Please enter your username");
+        		return(false);
+        	}
+        	if(form.password.value=="")
+        	{
+        		alert("Please enter your password");
+        		return(false);
+        	}
+        return(true);
+        }
+		//-->
+	</script>
+</head>
+
+<body>
+		<div id="outerBox">
+		<h1>User Login</h1>
+		<div id="innerBox">
+			<form id="loginForm" method="get" onsubmit="return check(this)" action="javascript:alert('submitted')">
+				<img src="images-used/userSymbol.png" height="100px" width="100px"><br><br>
+				<lable for="username">Username</lable><br>
+		        <input type="text" id="username"><br>
+		        <label for="password">Password</label><br>
+		        <input type="password" id="password"><br><br>
+		        <input type="submit" value="Sign in"><br><br>
+		        <input type="checkbox" value="rememberMe"><lable for="remeberMe">Remember Me</lable>
+		    </form>
+	    </div>
+		Don't have an account?<br>
+		Click here to <a href="sign-up.html">Sign up!</a>
+	    </div>
+
+	
+</body>
+</html>

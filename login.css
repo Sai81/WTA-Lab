@@ -1,0 +1,77 @@
+
+    body{
+		background-image: url(https://www.sagatraining.ca/wp-content/uploads/2018/10/background-images-for-login-form-8.jpg);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+	#outerBox{
+
+        width: 300px;
+        border: 2px solid black;
+        padding: 25px;
+        margin: auto;
+        color: black;
+        text-align: center;
+        background: white;
+        border-radius: 25px;
+    }
+
+    #innerBox{
+    	border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 10px;
+        border: 2px solid black;
+        margin: auto;
+    }
+    input[type=submit] {
+    	width: 150px;
+        background-color: green;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+    input[type=text] {
+        width: 200px;
+        padding: 5px 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }  
+    input[type=password] {
+        width: 200px;
+        padding: 5px 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    h1{
+    	size: 200px;
+    	color: black;
+    }
+
+    @media screen and (orientation: portrait) and (max-width: 400px){
+       body{
+        background-image: url(images-used/productDemoBG.png);
+        }
+        #outerBox{
+        width: 75%;
+        margin:auto;
+        }
+       input[type=submit]{
+        width:60%;
+        }
+        input[type=text] {
+        width: 70%;
+        }  
+        input[type=password] {
+        width: 70%;
+        }
+    }
