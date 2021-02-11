@@ -19,9 +19,18 @@
                 alert("Please select a city");
                 return(false);
             }
-
-            return(true);
+            if(confirm("Do you want to continue?"))
+            {   
+                alert("Your product demo has been submitted succesfully");
+                return(true);
+            }
+            else
+            {
+                return(false);
+            }
         }
+
+        
     </script>
 </head>
 <style>
@@ -139,7 +148,7 @@
 	<iframe width="300" height="200" src="https://www.youtube.com/embed/_Mm_q0X-R1c"></iframe>
     </div>
     <div id="form">
-    	<form id="productDemoForm" method="get" onsubmit="return(check(this))" action="javascript:alert('submitted')">
+    	<form id="productDemoForm" method="get" onsubmit="return(check(this))">
     	<h4>In order to sell your product on our site you need to provide following details</h4>
     	<textarea id="desc" name="desc" rows="6" cols="50" placeholder="Give a brief description of your product" ></textarea><br>
     	<label>   Price </label>

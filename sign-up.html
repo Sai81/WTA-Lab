@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>Sign Up</title>
+    <script language="JavaScript" src="sign-up.js"></script>
 	<style>
 	body{
 		background-image: url("images-used/signUpBackground.png");
@@ -122,9 +123,10 @@
 	<div id="outerBox">
 		<h2>Join for Free!</h2>
 		Already have an account? Click here to <a href=login.html>Sign In</a><br>
-		<label for="full-name">Name </label>
-		<input type="text" id="first-name" placeholder="First Name"> <input type="text" id="last-name" placeholder="Last Name"><br>
-		<label>Gender</label> 
+    <form id="signUpForm" method="get" onsubmit="return(check(this))" action="product-demo.html">
+		<label for="full-name">Name(*) </label>
+		<input type="text" id="first_name" placeholder="First Name"> <input type="text" id="last_name" placeholder="Last Name"><br>
+		<label>Gender(*)</label> 
 		<input type="radio" id="male" name="gender" value="male">Male
         <input type="radio" id="female" name="gender" value="female">Female
         <input type="radio" id="other" name="gender" value="other">Other<br>
@@ -135,14 +137,15 @@
             <option value="hyderabad">Hyderabad</option>
             <option value="chennai">Chennai</option>
         </select><br>
-		<label for="username">Username </label>
-		<input type="text" id="username" placeholder="Enter your username here"><br>
-	    <label for="password">Password </label>
-		<input type="password" id="password" placeholder="Enter atleast 5 characters"> <input type="password" id="confirm-password" placeholder="confirm password"><br>
-		<label for="email">Email </label>
-		<input type="email" id="username" placeholder="name@email.com"><br>
+		<label for="username">Username(*) </label>
+		<input type="text" id="user_name" placeholder="Enter your username here"><br>
+	    <label for="password">Password(*) </label>
+		<input type="password" id="password" placeholder="Enter atleast 8 characters"> <input type="password" id="confirm_password" placeholder="confirm password"><br>
+		<label for="email">Email(*) </label>
+		<input type="email" id="email_id" placeholder="name@email.com"><br>
 		<label>Date of Birth</label><input type="date" id="Date"><br><br>
 		<input type="submit" value="Sign Up"><br>
+    </form>
 	</div>
 </body>
 </html>

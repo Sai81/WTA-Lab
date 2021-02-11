@@ -16,7 +16,15 @@
         		alert("Please enter your password");
         		return(false);
         	}
-        return(true);
+
+        	if(confirm("Signed In successfully, click 'OK' to continue"))
+        	{
+        		return(true);
+        	}
+        	else
+        	{
+        		return(false);
+        	}
         }
 		//-->
 	</script>
@@ -26,7 +34,7 @@
 		<div id="outerBox">
 		<h1>User Login</h1>
 		<div id="innerBox">
-			<form id="loginForm" method="get" onsubmit="return check(this)" action="javascript:alert('submitted')">
+			<form id="loginForm" method="get" onsubmit="return check(this)" action="product-demo.html">
 				<img src="images-used/userSymbol.png" height="100px" width="100px"><br><br>
 				<lable for="username">Username</lable><br>
 		        <input type="text" id="username"><br>

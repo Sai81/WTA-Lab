@@ -5,11 +5,23 @@ function check(form)
 		alert("Please enter a First Name");
 		return(false);
 	}
-	if(form.gender.checked==false)
+
+	var g = form.gender;
+	var b = 0;
+	var flag=false;
+	for(b=0;b<g.length;b++)
+	{
+		if(g[b].checked==true)
+		{
+			flag=true;
+		}
+	}
+	if(!flag)
 	{
 		alert("Please select a gender");
 		return(false);
 	}
+	
 	if(form.user_name.value=="")
 	{
 		alert("Please enter a Username");
